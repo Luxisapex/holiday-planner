@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<link rel="stylesheet" type="text/css" href="css/pikaday.css">
+</head>
+<body>
+	<h1>Semesterplanerare</h1>
+	<!-- <form id="form"> -->
+		<h2>Lägg till dina semesterdagar</h2>
+		<label>Namn</label>
+		<select id="name">
+			<option>Fanny</option>
+			<option>Joel</option>
+		</select>
+		<label>Startdatum</label>
+		<input id="start-date" type="text" class="datepicker" />
+		<label>Slutdatum</label>
+		<input id="end-date" type="text" class="datepicker" />
+		<input id="button" type="button" value="submit"/>
+		<!-- <input id="submit" type="submit" /> -->
+	<!-- </form> -->
+	<h2>Schema</h2>
+	<table id="vacation-table">
+		<thead>
+			<td>Namn</td>
+			<td>Startdatum</td>
+			<td>Slutdatum</td>
+		</thead>
+		<tbody id="table-body">
+			
+		</tbody>
+	</table>
+	<script src="pikaday.js"></script>
+	<script src="app.js"></script>
+	<script>
+		var startDatePicker = new Pikaday({ field: document.getElementById("start-date") });
+		var endDatePicker = new Pikaday({ field: document.getElementById("end-date") });
+	</script>
+</body>
+</html>
